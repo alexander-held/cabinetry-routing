@@ -1,0 +1,38 @@
+{
+    "Samples": [
+        {
+            "Name": "signal",
+            "Variations": [
+                {"Name": "nominal", "Regions": [{"Name": "CR"}, {"Name": "SR"}]},
+                {"Name": "JER", "Regions": [{"Name": "CR"}, {"Name": "SR"}]},
+                {"Name": "signal_model", "Regions": [{"Name": "CR"}, {"Name": "SR"}]}
+            ]
+        },
+        {
+            "Name": "background",
+            "Variations": [
+                {
+                    "Name": "nominal",
+                    "Regions": [{"Name": "VR"}, {"Name": "CR"}, {"Name": "SR"}]
+                },
+                {
+                    "Name": "JER",
+                    "Regions": [{"Name": "VR"}, {"Name": "CR"}, {"Name": "SR"}]
+                },
+                {
+                    "Name": "MC_gen",
+                    "Regions": [{"Name": "VR"}, {"Name": "CR"}, {"Name": "SR"}]
+                }
+            ]
+        },
+        {
+            "Name": "data",
+            "Variations": [
+                {
+                    "Name": "nominal",
+                    "Regions": [{"Name": "VR"}, {"Name": "CR"}, {"Name": "SR"}]
+                }
+            ]
+        }
+    ]
+}
