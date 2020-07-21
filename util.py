@@ -5,7 +5,6 @@ class Router:
     def register_processor(self, sample=""):
         def register(func):
             self.processors[sample] = {"name": func.__name__, "func": func}
-            return func
 
         return register
 
@@ -24,4 +23,6 @@ def apply_processors(histogram_structure, processors_dict):
                     region["Name"].ljust(5),
                 )
                 # find which processor to call and run it
-                processors_dict[sample["Name"]]["func"]()
+                processors_dict[sample["Name"]]["func"](
+                    sample["Name"], variation["Name"], region["Name"]
+                )

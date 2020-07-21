@@ -10,18 +10,18 @@ router = Router()
 # with a specific kind of histogram (here: one where
 # the sample is "signal")
 @router.register_processor(sample="signal")
-def process_signal():
-    print("    using signal processor")
+def process_signal(sample, variation, region):
+    print(f"    using signal processor for {sample}-{variation}-{region}")
 
 
 @router.register_processor(sample="background")
-def process_background():
-    print("    using background processor")
+def process_background(sample, variation, region):
+    print(f"    using background processor for {sample}-{variation}-{region}")
 
 
 @router.register_processor(sample="data")
-def process_data():
-    print("    using data processor")
+def process_data(sample, variation, region):
+    print(f"    using data processor for {sample}-{variation}-{region}")
 
 
 if __name__ == "__main__":
