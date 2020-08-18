@@ -5,6 +5,7 @@ class Router:
     def register_processor(self, sample=""):
         def register(func):
             self.processors[sample] = {"name": func.__name__, "func": func}
+            return func
 
         return register
 
